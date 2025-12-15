@@ -9,6 +9,8 @@ on:
 jobs:
   send-feishu-message:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # 核心：允许写入仓库内容
     steps:
       # 步骤1：拉取仓库代码
       - name: Checkout code
