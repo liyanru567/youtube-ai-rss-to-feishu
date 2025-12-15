@@ -46,9 +46,9 @@ def send_feishu_batch_message(new_videos):
     
     # 飞书消息主体（单条消息包含所有新视频）
     msg_data = {
-        "msg_type": "markdown",
+        "msg_type": "text",
         "content": {
-            "title": f"🎬 YouTube新视频更新（共{len(new_videos)}个）",
+            "title": f"🎬 YouTube 订阅更新（共{len(new_videos)}个）",
             "text": "".join(video_items)  # 拼接所有视频条目
         }
     }
